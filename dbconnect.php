@@ -4,13 +4,12 @@ $MyPassword = "welkom";  // mysql wachtwoord
 $MyHostname = "localhost";      // dit is meestal "localhost" tenzij mysql op een andere server staat
 $MyDbase = "orta1";
 
-$dbh = @mysqli_connect($MyHostname , $MyUsername, $MyPassword, $MyDbase);
+$dbh = @mysqli_connect($MyHostname, $MyUsername, $MyPassword, $MyDbase);
 //$selected = mysql_select_db("orta1",$dbh);
 if (!$dbh) {
-                die("connection failed : " . mysqli_connect_error());
-            }
-            return $dbh;
-
+    die("connection failed : " . mysqli_connect_error());
+}
+return $dbh;
 ?>
 
 
